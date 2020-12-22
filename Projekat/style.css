@@ -1,73 +1,193 @@
-footer {
-  min-height: 300px;
-  background-image: linear-gradient(
-    to right top,
-    #6e157c,
-    #890064,
-    #990048,
-    #9e002b,
-    #990c0c
-  );
-  color: whitesmoke;
+
+.carousel{ 
+  height: 100vh;
+}
+.carousel-inner,.carousel-item {
+   height: 100%;
+}
+.carousel-item img {
+   height: 100%; 
+   object-fit: cover; 
+   object-position: center;
 }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
-  background-color: #8064a2;
-  border-color: #8064a2;
+div.col-sm-4{
+   padding-bottom: 3%;
+   padding-right: 1%;
 }
 
-.card {
-  margin: 1em auto;
-  width: 18em;
+div.col-sm-4:hover{
+   transition: transform 0.7s;
+   transform: scale(1.1);
+}
+a.nav-link{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  border-bottom: 3px solid transparent;
 }
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
+a.nav-link:hover {
+  border-bottom: 3px solid red;
 }
 
-.carousel-item {
-  height: 80vh;
-  background-color: black;
+a.dropdown-item:hover {
+  background-color:#d9232d;
 }
 
-.carousel-item > img {
-  opacity: 0.5;
-  height: 100%;
-  object-fit: cover;
+
+a.nav-link.active {
+  border-bottom: 3px solid red;
 }
 
-.carousel-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+@media (max-width: 992px) {
+  .navbar-collapse {
+      position: fixed;
+      top: 77px;
+      left: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+      width: 75%;
+      height: 100%;
+  }
+
+  .navbar-collapse.collapsing {
+      left: -75%;
+      transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+      left: 0;
+      transition: left 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+      transition: left 500ms ease-in-out;
+  }
 }
 
-.carousel-text > h1 {
-  padding: 0.1em;
-  margin: 1em;
-  border: 1px solid whitesmoke;
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 18px 0;
+  background: #f8f9fa;
+  min-height: 40px;
+  margin-top: 86px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 58px;
+  }
+}
+
+.breadcrumbs h2 {
+  font-size: 32px;
+  font-weight: 300;
   margin: 0;
 }
-a {
-  color: whitesmoke;
+
+@media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 58px;
+  }
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs h2 {
+    margin-bottom: 10px;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
 }
 
-a:hover {
-  color: wheat;
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+  width: 100%;
+  background: #fff;
 }
 
-h2 {
-  margin: 0.5em 0;
+
+.contact .info i {
+  font-size: 20px;
+  color: #556270;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #edeff1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 10px 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #556270;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #8795a4;
+}
+
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+  background: #d9232d;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Blog
+--------------------------------------------------------------*/
+.blog {
+  padding: 40px 0 40px 0;
+}
+
+.blog .entry {
+  padding: 20px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.blog .entry .entry-img {
+  max-height: 400px;
+  margin: -20px -20px 20px -20px;
+  overflow: hidden;
+}
+
+.blog .entry .entry-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.blog .entry .entry-title a {
+  color: #556270;
+  transition: 0.3s;
+}
+
+.blog .entry .entry-title a:hover {
+  color: #d9232d;
+}
+
+.blog .entry .entry-content p {
+  line-height: 24px;
+  font-size: 15px;
 }
